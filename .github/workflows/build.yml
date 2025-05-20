@@ -1,5 +1,10 @@
+name: Build Firmware
+
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      shield: totem_left
+      shield2: totem_right
